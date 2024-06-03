@@ -8,7 +8,7 @@ const Header = () => {
     userLogout();
   }
   return (
-    <div className="navbar bg-base-100 flex items-center">
+    <div className="navbar bg-amber-900 bg-opacity-45 flex items-center">
          
       <div className="dropdown md:hidden text-amber-900">
         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -27,7 +27,7 @@ const Header = () => {
             />
           </svg>
         </div>
-        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  px-1 text-lg">
+        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  px-1 text-2xl link-font ">
           <li>
             <Link to={"/"}>Home</Link>
           </li>
@@ -51,8 +51,8 @@ const Header = () => {
         </Link>
         
       </div>
-      <div className="md:flex hidden text-amber-900 ">
-        <ul className="menu menu-horizontal px-1 text-lg">
+      <div className="md:flex hidden text-amber-900  link-font  ">
+        <ul className="menu menu-horizontal px-1 text-2xl ">
           <li>
             <Link to={"/"}>Home</Link>
           </li>
@@ -74,11 +74,11 @@ const Header = () => {
         user? <div className="absolute right-3">
         <Link onClick={handleLogout}><button className="btn  bg-base-200 text-amber-900 ">Logout</button></Link>
       </div> : <div className="absolute right-3">
-        <Link  to={'/login'} ><button className="btn bg-amber-900 text-white">Login</button></Link>
+        <Link  to={'/login'} ><button className="btn hover:bg-amber-950 bg-amber-900 text-white">Login</button></Link>
       </div>
       }
       <div>
-        <img className="w-5 absolute right-28 rounded-full" src={user.photoURL} alt="" />
+        <img className="w-5 absolute right-28 rounded-full " src={user.photoURL} alt="" />
       </div>
     </div>
   );

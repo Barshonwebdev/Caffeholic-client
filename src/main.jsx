@@ -8,6 +8,8 @@ import {
 import Main from './Layout/Main.jsx';
 import Home from './Pages/Homepage/Home.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
+import Login from './AuthenticationRoutes/Login.jsx';
+import Register from './AuthenticationRoutes/Register.jsx';
 
 
 const router = createBrowserRouter([
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path:'/login',
+    element:<Login/>
+  },
+  {
+    path:'/register',
+    element:<Register/>
+  }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
