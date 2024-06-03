@@ -32,13 +32,13 @@ const Header = () => {
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={"/blogs"}>Blogs</Link>
-          </li>
-          <li>
             <Link to={"/coffees"}>Coffees</Link>
           </li>
           <li>
             <Link to={"/stories"}>Stories</Link>
+          </li>
+          <li>
+            <Link to={"/blogs"}>Blogs</Link>
           </li>
           <li>
             <Link to={"/dashboardlayout/dashboard"}>Dashboard</Link>
@@ -57,13 +57,13 @@ const Header = () => {
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={"/blogs"}>Blogs</Link>
-          </li>
-          <li>
             <Link to={"/coffees"}>Coffees</Link>
           </li>
           <li>
             <Link to={"/stories"}>Stories</Link>
+          </li>
+          <li>
+            <Link to={"/blogs"}>Blogs</Link>
           </li>
           <li>
             <Link to={"/dashboardlayout/home"}>Dashboard</Link>
