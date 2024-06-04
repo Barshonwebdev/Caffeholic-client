@@ -5,7 +5,7 @@ const Featured = () => {
     const [posts,setPosts]=useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/coffeeposts')
+        fetch('https://caffeholic-server.vercel.app/coffeeposts')
         .then((res)=>res.json())
         .then(data=>setPosts(data))
     },[])

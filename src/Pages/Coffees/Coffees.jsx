@@ -9,7 +9,7 @@ const Coffees = () => {
   const [filteredPosts, setFilteredPosts] = useState([]); //state for storing the filtered posts
 
   useEffect(()=>{
-    fetch('http://localhost:5000/coffeeposts')
+    fetch('https://caffeholic-server.vercel.app/coffeeposts')
     .then(res=>res.json())
     .then(data=>{
         setPosts(data);
