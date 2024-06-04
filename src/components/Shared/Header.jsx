@@ -32,7 +32,7 @@ const Header = () => {
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={"/coffees"}>Coffees!!</Link>
+            <Link to={"/coffees"}>Coffee Feed!!</Link>
           </li>
           <li>
             <Link to={"/stories"}>Stories</Link>
@@ -51,13 +51,13 @@ const Header = () => {
         </Link>
         
       </div>
-      <div className="md:flex hidden text-amber-900  link-font  ">
-        <ul className="menu menu-horizontal px-1 text-2xl ">
+      <div className="md:flex hidden  text-amber-900  link-font  ">
+        <ul className="menu menu-horizontal px-1 text-2xl md:text-xl lg:text-2xl ">
           <li>
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={"/coffees"}>Coffees!!</Link>
+            <Link to={"/coffees"}>Coffee Feed!!</Link>
           </li>
           <li>
             <Link to={"/stories"}>Stories</Link>
@@ -71,7 +71,7 @@ const Header = () => {
         </ul>
       </div>
       {
-        user? <div className="absolute right-3">
+        user? <div className=" absolute right-3">
         <Link onClick={handleLogout}><button className="btn text-xl font-extralight link-font  bg-base-200 text-amber-900 ">Logout</button></Link>
       </div> : <div className="absolute right-3">
         <Link  to={'/login'} ><button className="btn link-font text-xl font-extralight hover:bg-amber-950 bg-amber-900 text-white">Login</button></Link>

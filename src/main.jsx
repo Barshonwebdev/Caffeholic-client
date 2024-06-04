@@ -12,6 +12,8 @@ import Login from './AuthenticationRoutes/Login.jsx';
 import Register from './AuthenticationRoutes/Register.jsx';
 import Blogs from './Pages/Blogs/Blogs.jsx';
 import Stories from './Pages/Stories/Stories.jsx';
+import Coffees from './Pages/Coffees/Coffees.jsx';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -22,6 +24,11 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home/>
+      },
+      {
+        path:"/coffees",
+        element:<PrivateRoute><Coffees/></PrivateRoute>
+        
       },
       {
         path:"/blogs",
