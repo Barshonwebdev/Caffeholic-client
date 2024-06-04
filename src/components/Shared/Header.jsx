@@ -8,7 +8,7 @@ const Header = () => {
     userLogout();
   }
   return (
-    <div className="navbar bg-amber-900 bg-opacity-45 flex items-center">
+    <div className="navbar bg-amber-900 bg-opacity-45  flex items-center">
          
       <div className="dropdown md:hidden text-amber-900">
         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -32,7 +32,7 @@ const Header = () => {
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={"/coffees"}>Coffees</Link>
+            <Link to={"/coffees"}>Coffees!!</Link>
           </li>
           <li>
             <Link to={"/stories"}>Stories</Link>
@@ -57,7 +57,7 @@ const Header = () => {
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={"/coffees"}>Coffees</Link>
+            <Link to={"/coffees"}>Coffees!!</Link>
           </li>
           <li>
             <Link to={"/stories"}>Stories</Link>
@@ -72,9 +72,9 @@ const Header = () => {
       </div>
       {
         user? <div className="absolute right-3">
-        <Link onClick={handleLogout}><button className="btn  bg-base-200 text-amber-900 ">Logout</button></Link>
+        <Link onClick={handleLogout}><button className="btn text-xl font-extralight link-font  bg-base-200 text-amber-900 ">Logout</button></Link>
       </div> : <div className="absolute right-3">
-        <Link  to={'/login'} ><button className="btn hover:bg-amber-950 bg-amber-900 text-white">Login</button></Link>
+        <Link  to={'/login'} ><button className="btn link-font text-xl font-extralight hover:bg-amber-950 bg-amber-900 text-white">Login</button></Link>
       </div>
       }
       <div>

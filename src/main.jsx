@@ -10,6 +10,8 @@ import Home from './Pages/Homepage/Home.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import Login from './AuthenticationRoutes/Login.jsx';
 import Register from './AuthenticationRoutes/Register.jsx';
+import Blogs from './Pages/Blogs/Blogs.jsx';
+import Stories from './Pages/Stories/Stories.jsx';
 
 
 const router = createBrowserRouter([
@@ -20,7 +22,15 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home/>
-      }
+      },
+      {
+        path:"/blogs",
+        element:<Blogs/>
+      },
+      {
+        path:"/stories",
+        element:<Stories/>
+      },
     ]
   },
   {

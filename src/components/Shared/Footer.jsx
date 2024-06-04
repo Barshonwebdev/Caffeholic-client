@@ -2,8 +2,8 @@ import footerImg from '../../assets/coffee.png'
 
 const Footer = () => {
     return (
-        <div className="bg-amber-900 bg-opacity-45 text-amber-900 font-semibold">
-            <footer className="footer p-10 ">
+        <div className="bg-amber-900 bg-opacity-45 text-amber-900 font-semibold link-font">
+            <footer className="footer p-10  ">
   <nav>
     <h6 className="footer-title opacity-100 font-extrabold">Services</h6> 
     <a className="link link-hover">Branding</a>
@@ -25,7 +25,7 @@ const Footer = () => {
     <a className="link link-hover">Cookie policy</a>
   </nav>
 </footer> 
-<footer className="footer px-10 py-4 border-t border-amber-950">
+<footer className="footer px-10 py-4 border-t text-xl border-amber-950">
   <aside className="items-center grid-flow-col">
     <img className='w-16' src={footerImg} alt="" />
     <p>Caffeholic pvt. ltd. <br/>Coffeposting at it&apos;s finest since 2023</p>
