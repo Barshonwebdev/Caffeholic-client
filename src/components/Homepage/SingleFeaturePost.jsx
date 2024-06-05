@@ -1,6 +1,6 @@
 import React from "react";
 
-const Singlepost = ({ post }) => {
+const SingleFeaturePost = ({ post }) => {
   const {
     coffee_name,
     origin,
@@ -35,4 +35,4 @@ const Singlepost = ({ post }) => {
   );
 };
 
-export default Singlepost;
+export default SingleFeaturePost;

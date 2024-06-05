@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
-import Singlepost from "../../components/Homepage/Singlepost";
 import headerImg from '../../assets/coffee.png'
+import SinglePost from "./SinglePost";
 
 const Coffees = () => {
   const [posts,setPosts]=useState([]);   
@@ -40,20 +39,20 @@ const Coffees = () => {
         <img className="w-10 inline order-1" src={headerImg} alt="" />
         </div>
         
-        <div className="flex justify-center  ">
-          <div className="form-control">
+        <div className="sticky top-5 right-5 z-10  ">
+          
             <input
               type="text"
               placeholder="Search Posts"
-              className="input  input-bordered  mx-auto md:mx-0"
+              className="input lg:w-1/4 md:w-1/3 w-1/2 input-bordered  mx-auto ml-3"
               onChange={handleSearch}
               value={searchText}
             />
-          </div>
+          
         </div>
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 mt-5 mb-10 mx-4">
+        <div className="grid  grid-cols-1 gap-5 mt-5 mb-10 mx-4">
           {filteredPosts.map((post) => (
-            <Singlepost key={posts.id} post={post}></Singlepost>
+            <SinglePost key={posts.id} post={post}></SinglePost>
           ))}
         </div>
       </div>

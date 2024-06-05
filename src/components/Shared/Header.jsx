@@ -78,7 +78,7 @@ const Header = () => {
       </div>
       }
       <div>
-        <img className="w-5 absolute right-28 rounded-full " src={user.photoURL} alt="" />
+        <img className="md:w-4 w-7 lg:w-10 absolute right-24 rounded-full " src={user.photoURL} alt="" />
       </div>
     </div>
   );
