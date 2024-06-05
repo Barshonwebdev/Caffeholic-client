@@ -1,12 +1,12 @@
 import React from "react";
 
-const SingleFeaturePost = ({ post }) => {
+const SingleFeaturePost = ({ post, isDashboard }) => {
   const {
     coffee_name,
     origin,
     color,
     short_recipe,
-    description,
+    description, 
     personal_experience,
     type,
     poster,
@@ -29,6 +29,15 @@ const SingleFeaturePost = ({ post }) => {
           <p>Quick Recipe: {short_recipe}</p>
           <p className="my-2">Type: {type}</p>
           <p className="my-2">Personal experience: {personal_experience}</p>
+         { isDashboard?
+           <div className="flex justify-between mt-5">
+           <button className="btn bg-white text-amber-900 font-bold">Edit</button>
+           <button className="btn bg-white text-amber-900 font-bold">Delete</button>
+         </div> : <div className=" justify-between mt-5 hidden">
+           <button className="btn bg-white text-amber-900 font-bold">Edit</button>
+           <button className="btn bg-white text-amber-900 font-bold">Delete</button>
+         </div>
+         }
         </div>
       </div>
     </div>

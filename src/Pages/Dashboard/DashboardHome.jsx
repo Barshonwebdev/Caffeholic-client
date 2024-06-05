@@ -10,7 +10,7 @@ const DashboardHome = () => {
     fetch(`https://caffeholic-server.vercel.app/user/${user?.email}`)
     .then((res)=>res.json())
     .then(data=>setThisUser(data))
-  },[user?.email])
+  },[])
   const [stats,setStats]=useState({});
   useEffect(()=>{
     fetch(`https://caffeholic-server.vercel.app/stats`)
@@ -19,7 +19,7 @@ const DashboardHome = () => {
   },[])
   const [ownStats,setOwnStats]=useState([]);
   useEffect(()=>{
-    fetch(`https://caffeholic-server.vercel.app/stats/${user?.email}`)
+    fetch(`https://caffeholic-server.vercel.app/statsown?email=${user?.email}`)
     .then((res)=>res.json())
     .then(data=>setOwnStats(data))
   },[user?.email])
@@ -33,7 +33,7 @@ const DashboardHome = () => {
      <div className="my-5 md:my-0 md:mx-10  card  items-center rounded border-amber-900   lg:w-96 shadow-2xl  shadow-amber-900 ">
      <h1 className="text-center text-3xl font-bold text-amber-900 title-font my-1">Profile</h1>
         <figure className="px-5 pt-2">
-          <img src={thisUser?.photo} alt="Shoes" className="rounded-lg" />
+          <img src={thisUser?.photo} className="rounded-lg w-36" />
         </figure>
         <div className=" items-center p-5 ">
         <h1 className="text-center text-2xl font-bold text-amber-900 title-font my-1">Username: {thisUser.name}</h1>
@@ -51,7 +51,7 @@ const DashboardHome = () => {
         <div className=" items-center p-5 ">
         <h1 className="text-center text-3xl font-bold text-amber-900 title-font my-1">Total posts made: {stats.posts}</h1>
         <h1 className="text-center text-3xl font-bold text-amber-900 title-font my-1">Total users: {stats.users}</h1>
-        <h1 className="text-center text-3xl font-bold text-amber-900 title-font my-1">You made: {ownStats.length+1} posts!</h1>
+        <h1 className="text-center text-3xl font-bold text-amber-900 title-font my-1">You made:{ownStats.length} posts!</h1>
        
         </div>
       </div>
