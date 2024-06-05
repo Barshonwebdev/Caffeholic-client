@@ -23,7 +23,7 @@ const AddPost = () => {
     const photoURL = form.photo_url.value;
     const type = form.type.value;
     const short_recipe = form.recipe.value;
-    const poster = thisUser.name;
+    const poster = form.poster.value;
     const poster_email = thisUser.email;
     const productData = {
       poster,
@@ -89,7 +89,7 @@ const AddPost = () => {
                     name="poster"
                     defaultValue={user.displayName}
                     className="input input-bordered"
-                    disabled
+                    
                     required
                   />
                 </div>
