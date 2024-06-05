@@ -34,7 +34,7 @@ const Register = () => {
               verified:data?.user?.emailVerified,
               photo:photo
             }
-            fetch(`http://localhost:5000/user`,{
+            fetch(`https://caffeholic-server.vercel.app/user`,{
               method:"POST",
               headers: {
                 "Content-type":"application/json"

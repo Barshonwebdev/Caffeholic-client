@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const SingleFeaturePost = ({ post, isDashboard,onDelete }) => {
@@ -65,7 +66,7 @@ const SingleFeaturePost = ({ post, isDashboard,onDelete }) => {
           <p className="my-2">Personal experience: {personal_experience}</p>
          { isDashboard?
            <div className="flex justify-between mt-5">
-           <button className="btn bg-white text-amber-900 font-bold">Edit</button>
+           <Link to={`/dashboardlayout/editpost/${_id}`}><button className="btn bg-white text-amber-900 font-bold">Edit</button></Link>
            <button onClick={handleDelete} className="btn bg-white text-amber-900 font-bold">Delete</button>
          </div> : <div className=" justify-between mt-5 hidden">
            <button className="btn bg-white text-amber-900 font-bold">Edit</button>

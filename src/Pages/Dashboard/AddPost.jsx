@@ -25,7 +25,7 @@ const AddPost = () => {
     const short_recipe = form.recipe.value;
     const poster = form.poster.value;
     const poster_email = thisUser.email;
-    const productData = {
+    const postData = {
       poster,
       poster_email,
       coffee_name,
@@ -37,7 +37,6 @@ const AddPost = () => {
       type,
       color,
     };
-    console.log(productData);
 
     Swal.fire({
       title: "Are you sure?",
@@ -54,7 +53,7 @@ const AddPost = () => {
             "Content-type": "application/json",
             authorization: `Bearer ${token}`,
           },
-          body: JSON.stringify(productData),
+          body: JSON.stringify(postData),
         })
           .then((res) => res.json())
           .then((data) => {

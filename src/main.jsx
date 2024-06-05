@@ -73,12 +73,14 @@ const router = createBrowserRouter([
         element:<OwnPosts></OwnPosts>
       },
       {
-        path:'/dashboardlayout/editpost',
-        element:<Editpost></Editpost>
+        path:'/dashboardlayout/editpost/:id',
+        element:<Editpost></Editpost>,
+        loader:({params})=>fetch(`https://caffeholic-server.vercel.app/coffeeposts/${params.id}`)
       },
       {
-        path:'/dashboardlayout/editprofile',
-        element:<EditProfile></EditProfile>
+        path:'/dashboardlayout/editprofile/:email',
+        element:<EditProfile></EditProfile>,
+        loader:({params})=>fetch(`https://caffeholic-server.vercel.app/user/${params.email}`)
       },
     ]
   }

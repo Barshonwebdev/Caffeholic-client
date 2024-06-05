@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Drawer from "../../components/DashboardComponents/Drawer";
 import useAuth from "../../Hooks/useAuth";
 import headerImg from '../../assets/coffee.png'
+import { Link } from "react-router-dom";
 
 const DashboardHome = () => {
   const {user}=useAuth();
@@ -39,7 +40,7 @@ const DashboardHome = () => {
         <h1 className="text-center text-2xl font-bold text-amber-900 title-font my-1">Username: {thisUser.name}</h1>
         <h1 className="text-center text-2xl font-bold text-amber-900 title-font my-1">Email: {thisUser.email}</h1>
         <div className="flex justify-center mt-4">
-        <button className="btn btn-sm text-white bg-amber-900 hover:bg-amber-950">Edit Profile</button>
+       <Link to={`/dashboardlayout/editprofile/${thisUser.email}`}> <button className="btn btn-sm text-white bg-amber-900 hover:bg-amber-950">Edit Profile</button></Link>
         </div>
         </div>
       </div>
