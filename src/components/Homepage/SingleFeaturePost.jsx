@@ -20,9 +20,9 @@ const SingleFeaturePost = ({ post }) => {
           <img src={photoURL}  className="rounded-lg" />
         </figure>
         <div className=" items-center p-5 ">
-          <p className=" title-font text-xl">Posted by: {poster}</p>
+          <p className=" title-font text-2xl">Posted by: {poster}</p>
           <hr className="mb-5" />
-          <h2 className="card-title title-font text-3xl">{coffee_name}</h2>
+          <h2 className="card-title title-font text-4xl">{coffee_name}</h2>
           <p className="my-2 title-font text-xl">{description}</p>
           <h2 className="">Origin: {origin}</h2>
           <p>Color: {color}</p>
