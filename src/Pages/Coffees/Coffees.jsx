@@ -44,7 +44,7 @@ const Coffees = () => {
             <input
               type="text"
               placeholder="Search Posts"
-              className="input lg:w-1/4 md:w-1/3 w-1/2 input-bordered  mx-auto ml-3"
+              className="input lg:w-1/4  w-1/2 input-bordered  mx-auto ml-3"
               onChange={handleSearch}
               value={searchText}
             />

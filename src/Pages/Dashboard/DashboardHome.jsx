@@ -9,7 +9,7 @@ const DashboardHome = () => {
    <div className="">
      <Drawer/>
      <div>
-     <h1 className="text-center text-3xl text-amber-900 title-font my-4">Caffeholic Dashboard</h1>
+     <h1 className="text-center text-5xl text-amber-900 title-font my-8">Caffeholic Dashboard</h1>
 
      <div className=" flex items-center justify-center flex-col-reverse md:flex-row-reverse md:space-x-12 ">
      <div className="my-5 md:my-0 md:mx-10  card  items-center rounded border-amber-900   lg:w-96 shadow-2xl  shadow-amber-900 ">

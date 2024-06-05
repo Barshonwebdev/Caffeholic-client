@@ -24,9 +24,9 @@ const Drawer = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="space-y-5 text-xs lg:text-lg font-semibold menu p-4 md:w-44 w-40 lg:w-80 min-h-full bg-amber-900   text-white ">
+        <ul className="space-y-2 text-xs lg:text-lg font-semibold menu p-4 md:w-44 w-40 lg:w-80 min-h-full bg-amber-900   text-white ">
           {/* Sidebar content here */}
-            <h1 className='text-center title-font text-sm md:text-2xl mb-10'>Caffeholic Dashboard Menu</h1>
+            <h1 className='text-center title-font text-sm md:text-2xl mb-2 md:mb-10'>Caffeholic Dashboard Menu</h1>
             <Link to={'/dashboardlayout'}><FaArrowLeft className='inline me-2'></FaArrowLeft>Dashboard Main</Link>
             <Link to={'/dashboardlayout/addpost'}><SiCoffeescript className='inline me-2'></SiCoffeescript>Post Coffees!</Link>
             <Link to={'/dashboardlayout/ownposts'}><MdOutlineFeed className='inline me-2'></MdOutlineFeed>Own coffeeposts</Link>
