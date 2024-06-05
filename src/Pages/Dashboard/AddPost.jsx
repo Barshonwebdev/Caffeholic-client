@@ -32,7 +32,7 @@ const AddPost = () => {
             confirmButtonText: "Yes, Post!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch('http://localhost:5000/coffeeposts',{
+                fetch('https://caffeholic-server.vercel.app/coffeeposts',{
                     method:"POST",
                     headers:{
                         'Content-type':'application/json',

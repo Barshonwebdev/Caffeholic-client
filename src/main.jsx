@@ -20,12 +20,14 @@ import AddPost from './Pages/Dashboard/AddPost.jsx';
 import OwnPosts from './Pages/Dashboard/OwnPosts.jsx';
 import Editpost from './Pages/Dashboard/Editpost.jsx';
 import EditProfile from './Pages/Dashboard/EditProfile.jsx';
+import ErrorPage from './Pages/ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main/>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:"/",

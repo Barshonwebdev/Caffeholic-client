@@ -59,7 +59,7 @@ const Login = () => {
           verified:data?.user?.emailVerified,
               photo:data?.user?.photoURL
         }
-        fetch(`http://localhost:5000/user`,{
+        fetch(`https://caffeholic-server.vercel.app/user`,{
           method:"POST",
           headers: {
             "Content-type":"application/json"
