@@ -5,7 +5,7 @@ import Footer from '../components/Shared/Footer';
 
 const Dashboard = () => {
     return (
-        <div>
+        <div className=''>
             <Outlet></Outlet>
         </div>
     );

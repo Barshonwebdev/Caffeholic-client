@@ -17,7 +17,7 @@ const SingleFeaturePost = ({ post }) => {
     <div>
       <div className="card rounded w-full lg:w-96 bg-amber-900 bg-opacity-85 text-white shadow-xl">
         <figure className="px-5 pt-5">
-          <img src={photoURL} alt="Shoes" className="rounde-lg" />
+          <img src={photoURL}  className="rounded-lg" />
         </figure>
         <div className=" items-center p-5 ">
           <p className=" title-font text-xl">Posted by: {poster}</p>

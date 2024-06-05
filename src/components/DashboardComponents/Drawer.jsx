@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 const Drawer = () => {
     return (
         <div>
-<div className="drawer drawer-end">
+<div className="drawer drawer-end bg-amber-900 bg-opacity-75">
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         {/* Page content here */}
-        <div className="flex justify-center my-5">
+        <div className="flex justify-center my-5 ">
         <label htmlFor="my-drawer-4" className="drawer-button text-white btn bg-amber-900 hover:bg-amber-950">
-          Open Coffee dashboard menu
+          Open Caffeholic dashboard menu
         </label>
         </div>
       </div>
