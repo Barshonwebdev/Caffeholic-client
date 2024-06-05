@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const AddPost = () => {
     const {user}=useAuth();
     const token=localStorage.getItem('token');
-
+    
     const handleAddPost=(e)=>{
         e.preventDefault();
         const form=e.target;
@@ -173,6 +173,7 @@ const AddPost = () => {
               
               <div className="form-control mt-6 col-span-2">
                 <button className="btn text-white bg-amber-900 hover:bg-amber-950">Coffepost</button>
+               
               </div>
             </form>
           </div>

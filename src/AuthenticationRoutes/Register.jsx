@@ -15,6 +15,7 @@ const Register = () => {
         const name=form.name.value;
         const email=form.email.value;
         const pass=form.password.value;
+        const photo=form.photo.value;
         const confirmPass=form.confirmPassword.value;
         if(pass!==confirmPass){
           setConfirm(false);
@@ -31,7 +32,7 @@ const Register = () => {
               email:data?.user?.email,
               name:name,
               verified:data?.user?.emailVerified,
-              photo:data?.user?.photoURL
+              photo:photo
             }
             fetch(`http://localhost:5000/user`,{
               method:"POST",
@@ -41,7 +42,9 @@ const Register = () => {
               body:JSON.stringify(userInfo)
             })
             .then((res)=>res.json())
-            .then(data=>console.log(data))
+            .then(data=>{
+              localStorage.setItem('token',data?.token)
+              console.log(data)})
           }
           e.target.reset();
           navigate(from);
@@ -107,6 +110,19 @@ const Register = () => {
                       type="password"
                       name="confirmPassword"
                       placeholder="confirm your password"
+                      className="input input-bordered"
+                      required
+                    />
+                    
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Photo URL</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="photo"
+                      placeholder="photo url"
                       className="input input-bordered"
                       required
                     />
