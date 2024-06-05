@@ -17,6 +17,9 @@ import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 import Dashboard from './Layout/Dashboard.jsx';
 import DashboardHome from './Pages/Dashboard/DashboardHome.jsx';
 import AddPost from './Pages/Dashboard/AddPost.jsx';
+import OwnPosts from './Pages/Dashboard/OwnPosts.jsx';
+import Editpost from './Pages/Dashboard/Editpost.jsx';
+import EditProfile from './Pages/Dashboard/EditProfile.jsx';
 
 
 const router = createBrowserRouter([
@@ -62,7 +65,19 @@ const router = createBrowserRouter([
       {
         path:'/dashboardlayout/addpost',
         element:<AddPost></AddPost>
-      }
+      },
+      {
+        path:'/dashboardlayout/ownposts',
+        element:<OwnPosts></OwnPosts>
+      },
+      {
+        path:'/dashboardlayout/editpost',
+        element:<Editpost></Editpost>
+      },
+      {
+        path:'/dashboardlayout/editprofile',
+        element:<EditProfile></EditProfile>
+      },
     ]
   }
 ]);

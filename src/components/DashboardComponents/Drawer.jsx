@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SiCoffeescript } from "react-icons/si";
+import { IoHomeOutline } from "react-icons/io5";
+import { MdOutlineFeed } from "react-icons/md";
+import { FaArrowLeft } from "react-icons/fa";
 
 const Drawer = () => {
     return (
@@ -20,15 +24,14 @@ const Drawer = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu p-4 w-56 md:w-80 min-h-full bg-amber-900 text-white ">
+        <ul className="space-y-5 text-xs lg:text-lg font-semibold menu p-4 md:w-44 w-40 lg:w-80 min-h-full bg-amber-900   text-white ">
           {/* Sidebar content here */}
-        
-            <Link to={'/dashboardlayout'}>home</Link>
-            <Link to={'/dashboardlayout/addpost'}>blogs</Link>
-          
-          <li>
-            <a>Sidebar Item 2</a>
-          </li>
+            <h1 className='text-center title-font text-sm md:text-2xl mb-10'>Caffeholic Dashboard Menu</h1>
+            <Link to={'/dashboardlayout'}><FaArrowLeft className='inline me-2'></FaArrowLeft>Dashboard Main</Link>
+            <Link to={'/dashboardlayout/addpost'}><SiCoffeescript className='inline me-2'></SiCoffeescript>Post Coffees!</Link>
+            <Link to={'/dashboardlayout/ownposts'}><MdOutlineFeed className='inline me-2'></MdOutlineFeed>Own coffeeposts</Link>
+            <Link to={'/'}><IoHomeOutline className='inline me-2'></IoHomeOutline>Back to home</Link>
+            
         </ul>
       </div>
     </div>
