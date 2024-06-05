@@ -17,6 +17,12 @@ const DashboardHome = () => {
     .then((res)=>res.json())
     .then(data=>setStats(data))
   },[])
+  const [ownStats,setOwnStats]=useState([]);
+  useEffect(()=>{
+    fetch(`https://caffeholic-server.vercel.app/stats/${user?.email}`)
+    .then((res)=>res.json())
+    .then(data=>setOwnStats(data))
+  },[user?.email])
   return (
    <div className="">
      <Drawer/>
@@ -45,6 +51,7 @@ const DashboardHome = () => {
         <div className=" items-center p-5 ">
         <h1 className="text-center text-3xl font-bold text-amber-900 title-font my-1">Total posts made: {stats.posts}</h1>
         <h1 className="text-center text-3xl font-bold text-amber-900 title-font my-1">Total users: {stats.users}</h1>
+        <h1 className="text-center text-3xl font-bold text-amber-900 title-font my-1">You made: {ownStats.length+1} posts!</h1>
        
         </div>
       </div>
