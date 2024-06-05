@@ -16,9 +16,9 @@ const Login = () => {
     const pass = form.password.value;
     signIn(email, pass).then(() => {
       e.target.reset();
-      if(user){
+      
         navigate(from);
-      }
+      
     });
   };
   const handleGoogleLogin = () => {
