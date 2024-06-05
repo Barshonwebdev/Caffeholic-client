@@ -16,6 +16,7 @@ import Coffees from './Pages/Coffees/Coffees.jsx';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 import Dashboard from './Layout/Dashboard.jsx';
 import DashboardHome from './Pages/Dashboard/DashboardHome.jsx';
+import AddPost from './Pages/Dashboard/AddPost.jsx';
 
 
 const router = createBrowserRouter([
@@ -52,11 +53,15 @@ const router = createBrowserRouter([
   },
   {
     path:'/dashboardlayout',
-    element:<Dashboard></Dashboard>,
+    element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children:[
       {
-        path:'/dashboardlayout/home',
+        path:'/dashboardlayout',
         element:<DashboardHome></DashboardHome> 
+      },
+      {
+        path:'/dashboardlayout/addpost',
+        element:<AddPost></AddPost>
       }
     ]
   }
