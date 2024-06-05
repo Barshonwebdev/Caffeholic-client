@@ -11,6 +11,9 @@ const OwnPosts = () => {
     .then((res)=>res.json())
     .then(data=>setOwnPosts(data))
   },[user?.email])
+  const handleDeleteInstant=(id)=>{
+    setOwnPosts(ownPosts.filter((post)=>post._id!==id));
+  }
   return (
     <div>
       <Drawer></Drawer>
@@ -21,7 +24,7 @@ const OwnPosts = () => {
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5 mb-10 mx-4">
           {ownPosts.map((post) => (
-            <SingleFeaturePost isDashboard={true} key={post.id} post={post}></SingleFeaturePost>
+            <SingleFeaturePost isDashboard={true} onDelete={handleDeleteInstant} key={post.id} post={post}></SingleFeaturePost>
           ))}
         </div>
       </div>

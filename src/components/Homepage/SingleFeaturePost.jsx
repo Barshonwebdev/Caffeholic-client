@@ -1,7 +1,11 @@
 import React from "react";
+import Swal from "sweetalert2";
 
-const SingleFeaturePost = ({ post, isDashboard }) => {
+const SingleFeaturePost = ({ post, isDashboard,onDelete }) => {
+  const token=localStorage.getItem('token');
+
   const {
+    _id,
     coffee_name,
     origin,
     color,
@@ -13,6 +17,36 @@ const SingleFeaturePost = ({ post, isDashboard }) => {
     poster_email,
     photoURL,
   } = post;
+  const handleDelete = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`https://caffeholic-server.vercel.app/postsown/${_id}`, {
+          method: "DELETE",
+          headers:{
+            'Content-type':'application/json',
+            authorization:`Bearer ${token}`
+        },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            Swal.fire({
+              title: "Deleted!",
+              text: "Coffeepost has been deleted.",
+              icon: "success",
+            });
+            onDelete(_id);
+          });
+      }
+    });
+  };
   return (
     <div>
       <div className="card rounded w-full lg:w-96 bg-amber-900 bg-opacity-85 text-white shadow-xl">
@@ -32,7 +66,7 @@ const SingleFeaturePost = ({ post, isDashboard }) => {
          { isDashboard?
            <div className="flex justify-between mt-5">
            <button className="btn bg-white text-amber-900 font-bold">Edit</button>
-           <button className="btn bg-white text-amber-900 font-bold">Delete</button>
+           <button onClick={handleDelete} className="btn bg-white text-amber-900 font-bold">Delete</button>
          </div> : <div className=" justify-between mt-5 hidden">
            <button className="btn bg-white text-amber-900 font-bold">Edit</button>
            <button className="btn bg-white text-amber-900 font-bold">Delete</button>
