@@ -17,7 +17,7 @@ const SinglePost = ({ post }) => {
     <div>
       <div className="card w-full text-amber-900">
         <figure className="px-5 pt-5">
-          <img src={photoURL} alt="Shoes" className="rounded-xl lg:w-1/2 md:w-2/3" />
+          <img src={photoURL} alt="Shoes" className="rounded lg:w-1/2 md:w-2/3" />
         </figure>
         <div className=" items-center p-5 ">
           <p className=" title-font text-xl md:text-3xl">Posted by: {poster}</p>

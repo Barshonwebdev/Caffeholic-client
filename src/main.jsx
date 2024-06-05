@@ -14,6 +14,8 @@ import Blogs from './Pages/Blogs/Blogs.jsx';
 import Stories from './Pages/Stories/Stories.jsx';
 import Coffees from './Pages/Coffees/Coffees.jsx';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
+import Dashboard from './Layout/Dashboard.jsx';
+import DashboardHome from './Pages/Dashboard/DashboardHome.jsx';
 
 
 const router = createBrowserRouter([
@@ -47,6 +49,16 @@ const router = createBrowserRouter([
   {
     path:'/register',
     element:<Register/>
+  },
+  {
+    path:'/dashboardlayout',
+    element:<Dashboard></Dashboard>,
+    children:[
+      {
+        path:'/dashboardlayout/home',
+        element:<DashboardHome></DashboardHome> 
+      }
+    ]
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
