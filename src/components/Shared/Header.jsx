@@ -2,10 +2,27 @@
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import headerImg from '../../assets/coffee.png'
+import Swal from "sweetalert2";
 const Header = () => {
   const {user,userLogout}=useAuth();
   const handleLogout=()=>{
-    userLogout();
+    Swal.fire({
+      title: "Are you sure you wanna logout?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Log me out!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        userLogout();
+        Swal.fire({
+          title: "Logged out!",
+          icon: "success",
+        });
+      }
+    });
+   
   }
   return (
     <div className="navbar bg-amber-900 bg-opacity-45  flex items-center">

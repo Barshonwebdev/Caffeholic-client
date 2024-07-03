@@ -86,7 +86,7 @@ const EditProfile = () => {
                     <span className="label-text">Email</span>
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder="name"
                     className="input input-bordered"

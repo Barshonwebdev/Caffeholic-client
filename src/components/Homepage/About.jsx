@@ -31,7 +31,7 @@ const About = () => {
               <Link to={'/coffees'}><button className="btn bg-amber-900 text-white text-2xl font-extralight link-font hover:bg-amber-950">Explore Coffeeposting!</button></Link>
             </div>
           </div>
-          <img src={aboutimg} className="max-w-sm" />
+          <img src={aboutimg} className="" />
         </div>
       </div>
     </div>
