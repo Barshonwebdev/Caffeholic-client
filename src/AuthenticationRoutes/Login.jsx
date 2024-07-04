@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import useAuth from "../Hooks/useAuth";
 import img1 from "../assets/logincoffee.png"
 import img2 from "../assets/logincoffee2.png"
+import Swal from "sweetalert2";
 const Login = () => {
   const { googleLogin, user, githubLogin, signIn } = useAuth();
   const navigate=useNavigate();
@@ -18,6 +19,7 @@ const Login = () => {
       e.target.reset();
       
         navigate(from);
+        Swal.fire('user logged in!')
       
     });
   };
@@ -45,6 +47,8 @@ const Login = () => {
           console.log(data)})
       }
       navigate(from);
+      Swal.fire('user logged in!')
+
     })
     
   };
@@ -72,6 +76,8 @@ const Login = () => {
           console.log(data)})
       }
       navigate(from);
+      Swal.fire('user logged in!')
+
     })
     
   };
