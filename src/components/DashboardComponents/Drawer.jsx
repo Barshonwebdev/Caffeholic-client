@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { SiCoffeescript } from "react-icons/si";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineFeed } from "react-icons/md";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa"; 
 
 const Drawer = () => {
     return (

@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const SingleFeaturePost = ({ post, isDashboard,onDelete }) => {
   const token=localStorage.getItem('token');
-
+ 
   const {
     _id,
     coffee_name,
@@ -53,7 +53,7 @@ const SingleFeaturePost = ({ post, isDashboard,onDelete }) => {
       <div className="card rounded w-full lg:w-96 bg-amber-900 bg-opacity-85 text-white shadow-xl">
         <figure className="px-5 pt-5">
           <img src={photoURL}  className="rounded-lg" />
-        </figure>
+        </figure> 
         <div className=" items-center p-5 ">
           <p className=" title-font text-2xl">Posted by: {poster}</p>
           <hr className="mb-5" />
