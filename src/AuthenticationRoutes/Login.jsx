@@ -73,7 +73,7 @@ const Login = () => {
         .then((res)=>res.json())
         .then(data=>{
           localStorage.setItem('token',data?.token)
-          console.log(data)})
+          console.log(data)}) 
       }
       navigate(from);
       Swal.fire('user logged in!')
