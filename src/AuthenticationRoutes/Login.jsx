@@ -10,16 +10,16 @@ const Login = () => {
   const navigate=useNavigate();
   const location=useLocation();
   const from=location?.state?.from?.pathname || '/';
-  const handleSignin = (e) => {
+  const handleSignin = (e) => { 
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const pass = form.password.value;
+
     signIn(email, pass).then(() => {
       e.target.reset();
-      
-        navigate(from);
-        Swal.fire('user logged in!')
+      navigate(from);
+      Swal.fire('user logged in!')
       
     });
   };
