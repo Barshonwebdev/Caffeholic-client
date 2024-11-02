@@ -32,7 +32,7 @@ const Login = () => {
           email:data?.user?.email,
           name:data?.user?.displayName,
           verified:data?.user?.emailVerified,
-              photo:data?.user?.photoURL
+          photo:data?.user?.photoURL
         }
         fetch(`https://caffeholic-server.vercel.app/user`,{
           method:"POST",
@@ -148,7 +148,7 @@ const Login = () => {
                   <hr className="w-36 mx-auto" />
                   <Link to="/register" className="mx-auto">
                     <p className=" text-sm font-semibold">
-                      Not yet on Caffeholic? Sign up!
+                      Not yet on Caffeholic? Sign up! 
                     </p>
                   </Link>
                 </div>
